@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "New Tab Home",
+  "version": "1.0",
+  "description": "Loads your homepage when you open a new tab.",
+  "author": "Roly",
+  "homepage_url": "https://www.github.com/ylor/new-tab-home",
+  "permissions": [
+    "browserSettings",
+    "history",
+    "tabs"
+  ],
+  "chrome_settings_overrides": {},
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "newtab@home",
+      "strict_min_version": "67.0"
+    }
+  }
+}
