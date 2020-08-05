@@ -14,14 +14,15 @@ async function getHome() {
 
     if (home.startsWith("about:")) {
       //exit early if home begins with "about:"
-      console.error("about:");
-      return "about:blank";
+      console.log("Currently configured homepage is " + result.value);
+      home = "about:blank";
     } else if (!home.startsWith("http")) {
+      // if configured homepage doesn't begin with http(s) prepend it
       home = "http://" + home;
     }
     return home;
   } else {
-    console.log("Unable to retrieve configured homepage.");
+    console.error("Unable to retrieve configured homepage.");
     return "about:blank";
   }
 }
@@ -31,24 +32,21 @@ async function getHome() {
  */
 
 async function newTabHome() {
-  let home = await getHome();
-  const focus = true;
+  const home = await getHome();
+  const focus = await browser.storage.local
+    .get({ focus: "website" })
+    .then((data) => data.focus);
 
   await browser.tabs.getCurrent((tab) => {
     const tabId = tab.id;
 
-    if (focus) {
-      browser.tabs.create(
-        { url: home, cookieStoreId: tab.cookieStoreId },
-        (tab) => {
-          // cookieStoreId required to support the container tabs
-          browser.tabs.remove(tabId);
-        }
-      );
+    if (focus === "addressbar") {
+      browser.tabs.update(tabId, { url: home, loadReplace: true }, () => {});
+      // Nothing to do
+      // Required for browser.history.deleteUrl()
     } else {
-      browser.tabs.update(tabId, { url: home, loadReplace: true }, () => {
-        // Nothing to do
-        // Required for browser.history.deleteUrl() to work
+      browser.tabs.create({ url: home }, (tab) => {
+        browser.tabs.remove(tabId);
       });
     }
   });
