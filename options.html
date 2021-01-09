@@ -2,16 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="font/inter.css" rel="stylesheet" />
     <style>
       :root {
         --background: #202023;
-        --foreground: #f8f8f2;
-        --font-stack: -apple-system, "Inter", "Work Sans", sans-serif;
+        --foreground: #f9f9fa;
+        --font-stack: -apple-system, "Inter var", sans-serif;
       }
 
       @media (prefers-color-scheme: light) {
@@ -23,6 +19,7 @@
 
       html {
         box-sizing: border-box;
+        font-size: 20px;
       }
 
       *,
@@ -35,52 +32,31 @@
         background: var(--background);
         color: var(--foreground);
         font-family: var(--font-stack);
-        font-size: 16px;
+        font-size: 1rem;
         min-height: 100vh;
         padding: 0.666rem 1rem;
       }
 
-      main {
-        display: flex;
-      }
-
-      /* select {
-        background: var(--background);
-        color: var(--foreground);
-        font-family: inherit;
-        margin-left: 1rem;
-        padding: 0.666rem;
-        border-radius: 4px;
-        box-shadow: none;
-      } */
-
-      div,
-      span {
-        max-width: 24ch;
+      p,
+      label {
         font-weight: 300;
+        line-height: 1.25;
       }
     </style>
+    <script defer src="options.js"></script>
   </head>
 
   <body>
-    <header>
-      <h1 style="margin-top: 0">Cursor Focus</h1>
-    </header>
-    <main>
-      <span>Preferred cursor location when a new tab is opened:</span>
-      <section>
-        <label>
-          <input type="radio" name="preference" value="addressbar" />
-          Address Bar</label
-        >
-        <br />
-        <label>
-          <input type="radio" name="preference" value="website" />
-          Website</label
-        >
-      </section>
-    </main>
-    <p>Note: the URL that you would like to load when you open a new tab should be configured in Firefox Settings.</p>
-    <script defer src="options.js"></script>
+    <p>Select preferred cursor location:</p>
+    <br />
+    <label>
+      <input type="radio" name="preference" value="addressbar" />
+      Address Bar</label
+    >
+    <br />
+    <label>
+      <input type="radio" name="preference" value="website" />
+      Website</label
+    >
   </body>
 </html>

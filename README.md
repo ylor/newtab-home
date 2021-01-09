@@ -1,7 +1,8 @@
 # New Tab Home
+
 ![icon](img/icon@2x.png)
 
-Set your Firefox new tab page to match what is configured as your homepage.
+Set your Firefox new tab page to match your homepage.
 
 ## Permissions
 
@@ -11,6 +12,10 @@ Set your Firefox new tab page to match what is configured as your homepage.
   - To store your cursor location preference when opening a new tab
 
 ## Changelog
+
+- 1.3.1
+  - Redirect to ["How to set the home page"](https://support.mozilla.org/en-US/kb/how-to-set-the-home-page) support article when using unsupported homepage
+  - Use Inter locally instead of reaching out to Google fonts
 - 1.3
   - Refactor extension
   - Provide more feedback when homepages set to use priveleged URLs and cannot be used
@@ -25,11 +30,13 @@ Set your Firefox new tab page to match what is configured as your homepage.
   - Initial release
 
 ## Acknowledgements
+
 This extension would not have been possible without:
-* Mozilla for [Firefox](https://www.mozilla.org/firefox/), [Fira Sans](https://mozilla.github.io/Fira/), [Firefox Design resources](https://design.firefox.com/photon/), and their [excellent WebExtension documentation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  * Firefox is fast, reliable, open-source, and respects my privacy.
-  * Firefox is the only major browser that does not contribute to the Webkit/Blink hegemony
-* [Visual Studio Code](https://code.visualstudio.com/) for writing code
-* [Figma](https://www.figma.com/) for icon design
-* [New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) for inspiration
-* [Rasmus Andersson](https://tiwtter.com/rsms) for the beautiful [Inter](https://rsms.me/inter/) font
+
+- Mozilla for [Firefox](https://www.mozilla.org/firefox/), [Fira Sans](https://mozilla.github.io/Fira/), [Firefox Design resources](https://design.firefox.com/photon/), and their [excellent WebExtension documentation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
+  - Firefox is fast, reliable, open-source, and respects my privacy.
+  - Firefox is the only major browser that does not contribute to the Webkit/Blink hegemony
+- [Visual Studio Code](https://code.visualstudio.com/) for writing code
+- [Figma](https://www.figma.com/) for icon design
+- [New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) for inspiration
+- [Rasmus Andersson](https://tiwtter.com/rsms) for the beautiful [Inter](https://rsms.me/inter/) font

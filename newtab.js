@@ -14,15 +14,15 @@ async function getHomepage() {
     let result = await browser.browserSettings.homepageOverride.get({});
     let homepage = result.value;
 
-
     if (privilegedUrls.test(homepage)) {
       // Exit early if configured homepage is a priveleged URL
       alert(
-        `The currently configured homepage is considered a priveleged URL by Firefox and may not be used.
+        `The currently configured homepage is considered a privileged URL by Firefox and may not be used.
 
-Please consider using a homepage that begins with http:// or https://`
+Please set your homepage to an http:// or https:// address using the following instructions.`
       );
-      homepage = "about:blank";
+      homepage =
+        "https://support.mozilla.org/en-US/kb/how-to-set-the-home-page";
     } else if (!homepage.startsWith("http")) {
       // if configured homepage doesn't begin with http prepend it with https
       homepage = "https://" + homepage;
@@ -36,7 +36,6 @@ Please consider using a homepage that begins with http:// or https://`
   }
 }
 
-
 // Do the thing
 !(async function () {
   const homepageUrl = await getHomepage();
@@ -47,13 +46,13 @@ Please consider using a homepage that begins with http:// or https://`
   await browser.tabs.getCurrent((tab) => {
     if (focusPreference === "addressbar") {
       browser.tabs.update(
-        tab['id'],
+        tab["id"],
         { url: homepageUrl, loadReplace: true },
         () => {}
       );
     } else {
       browser.tabs.create({ url: homepageUrl }, () => {
-        browser.tabs.remove(tab['id']);
+        browser.tabs.remove(tab["id"]);
       });
     }
   });
