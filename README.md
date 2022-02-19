@@ -1,6 +1,6 @@
 # New Tab Home
 
-![icon](img/icon@2x.png)
+![icon](img/icon.png)
 
 Set your Firefox new tab page to match your homepage.
 
@@ -12,7 +12,9 @@ Set your Firefox new tab page to match your homepage.
   - To store your cursor location preference when opening a new tab
 
 ## Changelog
-
+- 1.4
+  - Minor facelift to match Firefox Proton design
+  - New icon
 - 1.3.1
   - Redirect to ["How to set the home page"](https://support.mozilla.org/en-US/kb/how-to-set-the-home-page) support article when using unsupported homepage
   - Use Inter locally instead of reaching out to Google fonts
