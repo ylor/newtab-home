@@ -20,7 +20,7 @@
   - Use Inter locally instead of reaching out to Google fonts
 - 1.3
   - Refactor extension
-  - Provide more feedback when homepages set to use priveleged URLs and cannot be used
+  - Provide more feedback when homepages set to use privileged URLs and cannot be used
   - Add information regarding requested permissions and why they're used to readme
   - Remove the browserHistory and browserTabs permission
 - 1.2
