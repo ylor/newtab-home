@@ -2,7 +2,7 @@
 
 ![icon](img/icon.png)
 
-Set your Firefox new tab page to match your homepage.
+**There's no place like home.**
 
 ## Permissions
 
