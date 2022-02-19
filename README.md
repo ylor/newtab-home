@@ -35,9 +35,9 @@ Set your Firefox new tab page to match your homepage.
 
 This extension would not have been possible without:
 
-- Mozilla for [Firefox](https://www.mozilla.org/firefox/), [Fira Sans](https://mozilla.github.io/Fira/), [Firefox Design resources](https://design.firefox.com/photon/), and their [excellent WebExtension documentation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
+- Mozilla for [Firefox](https://www.mozilla.org/firefox/) and their [excellent WebExtension documentation](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
   - Firefox is fast, reliable, open-source, and respects my privacy.
-  - Firefox is the only major browser that does not contribute to the Webkit/Blink hegemony
+  - Firefox is the only major browser that does not contribute to the Webkit/Blink hegemony.
 - [Visual Studio Code](https://code.visualstudio.com/) for writing code
 - [Figma](https://www.figma.com/) for icon design
 - [New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) for inspiration
