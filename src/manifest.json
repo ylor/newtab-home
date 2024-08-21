@@ -1,25 +1,27 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "New Tab Home",
-  "version": "1.4",
+  "version": "1.6.1",
   "description": "There's no place like home.",
-  "author": "Ylor",
+  "author": "Roly",
   "homepage_url": "https://www.github.com/ylor/newtab-home",
   "icons": {
     "48": "img/icon.svg",
     "96": "img/icon.svg"
   },
-  "permissions": ["browserSettings", "storage"],
+  "permissions": [
+    "browserSettings",
+    "storage"
+  ],
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
   "options_ui": {
     "page": "options.html"
   },
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
-      "id": "newtab@home",
-      "strict_min_version": "67.0"
+      "id": "newtab@home"
     }
   }
 }
